@@ -78,8 +78,15 @@ WSGI_APPLICATION = "website.wsgi.application"
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+        "ENGINE": "django.db.backends.postgresql",
+        # Created database in postgresql and granted all privileges to kevalpancholi
+        "NAME": "pharmtrackv1",
+        # Able to sign into postgresql using my macOS username
+        "USER": "kevalpancholi",
+        "PASSWORD": "",
+        "HOST": "localhost",
+        # Default PostgreSQL port
+        "PORT": "5432",  
     }
 }
 
